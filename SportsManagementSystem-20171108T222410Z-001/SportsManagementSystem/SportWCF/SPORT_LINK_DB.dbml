@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SPORT_DB" Class="SPORT_LINK_DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ADMIN-PC;Initial Catalog=SPORT_DB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SPORT_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.USERIMAGE" Member="USERIMAGEs">
+    <Type Name="USERIMAGE">
+      <Column Name="ImageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="USER_USERIMAGE" Member="USER" ThisKey="UserId" OtherKey="UserId" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[USER]" Member="USERs">
+    <Type Name="USER">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UserImage" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="USER_USERIMAGE" Member="USERIMAGEs" ThisKey="UserId" OtherKey="UserId" Type="USERIMAGE" />
+      <Association Name="USER_SPORT" Member="SPORTs" ThisKey="UserId" OtherKey="UserId" Type="SPORT" />
+      <Association Name="USER_LEAGUE" Member="LEAGUEs" ThisKey="UserId" OtherKey="UserId" Type="LEAGUE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TEAMPLAYER" Member="TEAMPLAYERs">
+    <Type Name="TEAMPLAYER">
+      <Column Name="PlayerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PerformanceRate" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Sport_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SPORT_TEAMPLAYER" Member="SPORT" ThisKey="Sport_Id" OtherKey="Sport_Id" Type="SPORT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TEAMIMAGE" Member="TEAMIMAGEs">
+    <Type Name="TEAMIMAGE">
+      <Column Name="ImageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sport_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="SPORT_TEAMIMAGE" Member="SPORT" ThisKey="Sport_Id" OtherKey="Sport_Id" Type="SPORT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SPORT_LEAGUE" Member="SPORT_LEAGUEs">
+    <Type Name="SPORT_LEAGUE">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="League_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sport_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TeamName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LeagueName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TeamAverage" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="SPORT_SPORT_LEAGUE" Member="SPORT" ThisKey="Sport_Id" OtherKey="Sport_Id" Type="SPORT" IsForeignKey="true" />
+      <Association Name="LEAGUE_SPORT_LEAGUE" Member="LEAGUE" ThisKey="League_Id" OtherKey="League_Id" Type="LEAGUE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SPORT" Member="SPORTs">
+    <Type Name="SPORT">
+      <Column Name="Sport_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NumPlayers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Average" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="SPORT_TEAMPLAYER" Member="TEAMPLAYERs" ThisKey="Sport_Id" OtherKey="Sport_Id" Type="TEAMPLAYER" />
+      <Association Name="SPORT_TEAMIMAGE" Member="TEAMIMAGEs" ThisKey="Sport_Id" OtherKey="Sport_Id" Type="TEAMIMAGE" />
+      <Association Name="SPORT_SPORT_LEAGUE" Member="SPORT_LEAGUEs" ThisKey="Sport_Id" OtherKey="Sport_Id" Type="SPORT_LEAGUE" />
+      <Association Name="USER_SPORT" Member="USER" ThisKey="UserId" OtherKey="UserId" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[LOG]" Member="LOGs">
+    <Type Name="LOG">
+      <Column Name="Log_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Position" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MatchPlayed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Wins" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Loose" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Draws" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="League_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LEAGUE_LOG" Member="LEAGUE" ThisKey="League_Id" OtherKey="League_Id" Type="LEAGUE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LEAGUES_GAMES" Member="LEAGUES_GAMEs">
+    <Type Name="LEAGUES_GAME">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="teamOne" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="teamTwo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LEAGUE_IMAGE" Member="LEAGUE_IMAGEs">
+    <Type Name="LEAGUE_IMAGE">
+      <Column Name="Image_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="League_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="LEAGUE_LEAGUE_IMAGE" Member="LEAGUE" ThisKey="League_Id" OtherKey="League_Id" Type="LEAGUE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LEAGUE" Member="LEAGUEs">
+    <Type Name="LEAGUE">
+      <Column Name="League_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="WinningPrice" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="sDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="eDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NumTeams" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LEAGUE_SPORT_LEAGUE" Member="SPORT_LEAGUEs" ThisKey="League_Id" OtherKey="League_Id" Type="SPORT_LEAGUE" />
+      <Association Name="LEAGUE_LOG" Member="LOGs" ThisKey="League_Id" OtherKey="League_Id" Type="LOG" />
+      <Association Name="LEAGUE_LEAGUE_IMAGE" Member="LEAGUE_IMAGEs" ThisKey="League_Id" OtherKey="League_Id" Type="LEAGUE_IMAGE" />
+      <Association Name="LEAGUE_GAME" Member="GAMEs" ThisKey="League_Id" OtherKey="League_Id" Type="GAME" />
+      <Association Name="LEAGUE_BEST_PLAYER" Member="BEST_PLAYERs" ThisKey="League_Id" OtherKey="league_ID" Type="BEST_PLAYER" />
+      <Association Name="USER_LEAGUE" Member="USER" ThisKey="UserId" OtherKey="UserId" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GAME_TICKET" Member="GAME_TICKETs">
+    <Type Name="GAME_TICKET">
+      <Column Name="Ticket_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Game_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GAME_GAME_TICKET" Member="GAME" ThisKey="Game_Id" OtherKey="Game_Id" Type="GAME" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GAME_STATS" Member="GAME_STATs">
+    <Type Name="GAME_STAT">
+      <Column Name="stats_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BestPlayer" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team1_Position" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team2_Position" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team1_Fouls" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team2_Fouls" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Game_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team1_YellowCard" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team2_YellowCard" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team1_RedCard" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team2_RedCard" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team1_NumCornerKick" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team2_NumCornerKick" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team1_GoalScored" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team2_GoalScored" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Team1_OveralAverage" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Team2_OveralAverage" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="GAME_GAME_STAT" Member="GAME" ThisKey="Game_Id" OtherKey="Game_Id" Type="GAME" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GAME_IMAGE" Member="GAME_IMAGEs">
+    <Type Name="GAME_IMAGE">
+      <Column Name="image_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Game_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="GAME_GAME_IMAGE" Member="GAME" ThisKey="Game_Id" OtherKey="Game_Id" Type="GAME" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GAME" Member="GAMEs">
+    <Type Name="GAME">
+      <Column Name="Game_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Team1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Team2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="sDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Venue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="GameType" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="League_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GAME_GAME_TICKET" Member="GAME_TICKETs" ThisKey="Game_Id" OtherKey="Game_Id" Type="GAME_TICKET" />
+      <Association Name="GAME_GAME_STAT" Member="GAME_STATs" ThisKey="Game_Id" OtherKey="Game_Id" Type="GAME_STAT" />
+      <Association Name="GAME_GAME_IMAGE" Member="GAME_IMAGEs" ThisKey="Game_Id" OtherKey="Game_Id" Type="GAME_IMAGE" />
+      <Association Name="LEAGUE_GAME" Member="LEAGUE" ThisKey="League_Id" OtherKey="League_Id" Type="LEAGUE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmpNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DeptName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BEST_PLAYER" Member="BEST_PLAYERs">
+    <Type Name="BEST_PLAYER">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="league_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScorerName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Goals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Average" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="LEAGUE_BEST_PLAYER" Member="LEAGUE" ThisKey="league_ID" OtherKey="League_Id" Type="LEAGUE" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

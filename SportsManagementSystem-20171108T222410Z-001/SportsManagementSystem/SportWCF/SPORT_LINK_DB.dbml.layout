@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 28.125" name="SPORT_LINK_DB">
+  <DataContextMoniker Name="/SPORT_LINK_DBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fb48faa7-bb17-41b4-a293-7c0427f91b0c" absoluteBounds="3.5, 3.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/USERIMAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63d1eea1-1267-402e-a5e4-53faed9d230a" absoluteBounds="3.515, 3.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2878f028-5ad8-4051-b69d-5fdf2bb32d64" absoluteBounds="0.75, 14.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7362554-d7e5-4d9b-9a5d-49fd652c8524" absoluteBounds="0.765, 15.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63237f43-8986-400c-a2a1-288054118a1c" absoluteBounds="6.25, 8.25, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/TEAMPLAYER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71b3b5d5-7195-41f0-98d4-b1d89ce9557d" absoluteBounds="6.265, 8.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61234210-1ee0-4db1-be82-535e13b94964" absoluteBounds="6.25, 5.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/TEAMIMAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e1995f0-1c12-4642-9589-d4f32457ed7b" absoluteBounds="6.265, 6.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24bd009e-1175-40d5-9e6e-da516ba49498" absoluteBounds="6.25, 15.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/SPORT_LEAGUE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3013944d-066c-424b-9341-90ad1680a26d" absoluteBounds="6.265, 16.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87f1e1a0-e714-43bb-ba60-7d5e6f9ab5bc" absoluteBounds="3.5, 6.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/SPORT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de362ec3-58c0-4bff-93f5-354bef70a0b0" absoluteBounds="3.515, 7.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40eafe01-28a8-45fc-b443-7b8824ced74e" absoluteBounds="6.25, 25.375, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29ced493-efd6-43af-88e4-0a0433e0e055" absoluteBounds="6.265, 25.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d82c553-a0d0-4941-ba3c-aae403e2cbf1" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/LEAGUES_GAME" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffee7567-db74-41fe-aac4-9225f37d235e" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="496afabe-33e4-4764-aa7c-8264e1127aba" absoluteBounds="6.25, 10.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/LEAGUE_IMAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2da15ff-a4d1-41b8-adcf-d5fcdb9136cb" absoluteBounds="6.265, 11.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d450542-75f8-4d6c-8abc-de294ce4488c" absoluteBounds="3.5, 18.125, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/LEAGUE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3837d831-ed6b-4516-8cf9-828347d4900d" absoluteBounds="3.515, 18.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="082cf253-2220-4172-8d6f-42cca03ee808" absoluteBounds="9, 18.125, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/GAME_TICKET" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad9479f1-5665-49c3-95cd-7ef6965168ee" absoluteBounds="9.015, 18.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eb433e62-e775-47ed-80a1-01187cccfad1" absoluteBounds="9, 20.625, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/GAME_STAT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f9cabed-4fbc-4f14-b8f8-3b17ae018ed3" absoluteBounds="9.015, 21.085, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b96c1b5f-1f9d-4c04-8a9d-173dcdc31a22" absoluteBounds="9, 15.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/GAME_IMAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3131cc33-164f-4342-bf32-aa7c1eabf593" absoluteBounds="9.015, 16.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9e57861-75ca-4481-a3d1-a6788d016fb3" absoluteBounds="6.25, 19.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/GAME" />
+      <nestedChildShapes>
+        <elementListCompartment Id="560c7cb7-ecfc-4f7a-b3be-42548f6f906a" absoluteBounds="6.265, 19.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d53e1cc1-a2ea-4b1f-8e83-91018b4f7392" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30e5ccd4-4b4c-4d9b-8f99-fdedad2f2d4e" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9ef621e-9e76-464c-8ea3-dcdf77b8f12d" absoluteBounds="6.25, 13.25, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/SPORT_LINK_DBDataContext/BEST_PLAYER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff5075ac-4047-41d9-87b2-d8928acd0f65" absoluteBounds="6.265, 13.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 14.625); (1.75 : 4.28929768880208); (3.5 : 4.28929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/USER/USER_USERIMAGE" />
+      <nodes>
+        <classShapeMoniker Id="2878f028-5ad8-4051-b69d-5fdf2bb32d64" />
+        <classShapeMoniker Id="fb48faa7-bb17-41b4-a293-7c0427f91b0c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.64024983723958); (6.25 : 8.64024983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/SPORT/SPORT_TEAMPLAYER" />
+      <nodes>
+        <classShapeMoniker Id="87f1e1a0-e714-43bb-ba60-7d5e6f9ab5bc" />
+        <classShapeMoniker Id="63237f43-8986-400c-a2a1-288054118a1c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.16429768880208); (6.25 : 7.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/SPORT/SPORT_TEAMIMAGE" />
+      <nodes>
+        <classShapeMoniker Id="87f1e1a0-e714-43bb-ba60-7d5e6f9ab5bc" />
+        <classShapeMoniker Id="61234210-1ee0-4db1-be82-535e13b94964" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 9.03049967447917); (4.5 : 16.8565991210938); (5.19791916666667 : 16.8565991210938 : JumpStart); (5.36458583333333 : 16.8565991210938 : JumpEnd); (6.25 : 16.8565991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/SPORT/SPORT_SPORT_LEAGUE" />
+      <nodes>
+        <classShapeMoniker Id="87f1e1a0-e714-43bb-ba60-7d5e6f9ab5bc" />
+        <classShapeMoniker Id="24bd009e-1175-40d5-9e6e-da516ba49498" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 14.625); (2.2812525 : 7.95274983723958); (3.5 : 7.95274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/USER/USER_SPORT" />
+      <nodes>
+        <classShapeMoniker Id="2878f028-5ad8-4051-b69d-5fdf2bb32d64" />
+        <classShapeMoniker Id="87f1e1a0-e714-43bb-ba60-7d5e6f9ab5bc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 18.125); (5 : 17.3786511816406); (5.19791916666667 : 17.3786511816406 : JumpStart); (5.36458583333333 : 17.3786511816406 : JumpEnd); (6.25 : 17.3786511816406)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/LEAGUE/LEAGUE_SPORT_LEAGUE" />
+      <nodes>
+        <classShapeMoniker Id="3d450542-75f8-4d6c-8abc-de294ce4488c" />
+        <classShapeMoniker Id="24bd009e-1175-40d5-9e6e-da516ba49498" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 20.6651025390625); (4.5 : 26.6450512695313); (6.25 : 26.6450512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/LEAGUE/LEAGUE_LOG" />
+      <nodes>
+        <classShapeMoniker Id="3d450542-75f8-4d6c-8abc-de294ce4488c" />
+        <classShapeMoniker Id="40eafe01-28a8-45fc-b443-7b8824ced74e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 18.125); (4 : 11.6642976888021); (4.41666666666667 : 11.6642976888021 : JumpStart); (4.58333333333333 : 11.6642976888021 : JumpEnd); (6.25 : 11.6642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/LEAGUE/LEAGUE_LEAGUE_IMAGE" />
+      <nodes>
+        <classShapeMoniker Id="3d450542-75f8-4d6c-8abc-de294ce4488c" />
+        <classShapeMoniker Id="496afabe-33e4-4764-aa7c-8264e1127aba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 16.7804996744792); (1.75 : 19.3950512695313); (3.5 : 19.3950512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/USER/USER_LEAGUE" />
+      <nodes>
+        <classShapeMoniker Id="2878f028-5ad8-4051-b69d-5fdf2bb32d64" />
+        <classShapeMoniker Id="3d450542-75f8-4d6c-8abc-de294ce4488c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 19.5104484049479); (9 : 19.5104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/GAME/GAME_GAME_TICKET" />
+      <nodes>
+        <classShapeMoniker Id="e9e57861-75ca-4481-a3d1-a6788d016fb3" />
+        <classShapeMoniker Id="082cf253-2220-4172-8d6f-42cca03ee808" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 20.9527498372396); (9 : 20.9527498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/GAME/GAME_GAME_STAT" />
+      <nodes>
+        <classShapeMoniker Id="e9e57861-75ca-4481-a3d1-a6788d016fb3" />
+        <classShapeMoniker Id="eb433e62-e775-47ed-80a1-01187cccfad1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 19.125); (8.625 : 18.75); (8.625 : 16.5392976888021); (9 : 16.5392976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/GAME/GAME_GAME_IMAGE" />
+      <nodes>
+        <classShapeMoniker Id="e9e57861-75ca-4481-a3d1-a6788d016fb3" />
+        <classShapeMoniker Id="b96c1b5f-1f9d-4c04-8a9d-173dcdc31a22" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 19.8950512695313); (6.25 : 19.8950512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/LEAGUE/LEAGUE_GAME" />
+      <nodes>
+        <classShapeMoniker Id="3d450542-75f8-4d6c-8abc-de294ce4488c" />
+        <classShapeMoniker Id="e9e57861-75ca-4481-a3d1-a6788d016fb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.2812525 : 18.125); (5.2812525 : 14.1354484049479); (6.25 : 14.1354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SPORT_LINK_DBDataContext/LEAGUE/LEAGUE_BEST_PLAYER" />
+      <nodes>
+        <classShapeMoniker Id="3d450542-75f8-4d6c-8abc-de294ce4488c" />
+        <classShapeMoniker Id="a9ef621e-9e76-464c-8ea3-dcdf77b8f12d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
